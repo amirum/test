@@ -1,0 +1,40 @@
+body{
+    font-family: Arial;
+}
+
+img{
+    width: 100%;
+}
+
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.wrapper {
+    display: grid;
+    width: 60%;
+    margin: auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "navigation"
+}
+  
+
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        grid-template-areas: 
+        "header header"
+        "content navigation";
+    } 
+}
